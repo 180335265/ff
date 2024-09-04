@@ -1,0 +1,246 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="18;url=https://baidu.com">
+    <title>在线支付 - 网上支付 安全快速！</title>
+    <style>
+        body {
+            background: #f2f2f4;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+
+        *, :after, :before {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        #header {
+            height: 60px;
+            border-bottom: 2px solid #eee;
+            background-color: #fff;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        #header h1 {
+            font-size: 20px;
+        }
+
+        #main {
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 80px;
+            width: 992px;
+            max-width: 100%;
+        }
+
+        #main .left {
+            float: left;
+            width: 40%;
+            box-shadow: 0 0 60px #b5f1ff;
+        }
+
+        .left p {
+            margin: 10px auto;
+        }
+
+        .make {
+            padding-top: 15px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 3px 3px 0 rgba(0,0,0,.05);
+            color: #666;
+            text-align: center;
+            transition: all .2s linear;
+        }
+
+        .make .qrcode {
+            margin: auto;
+        }
+
+        .make .money {
+            margin-bottom: 0;
+            color: #f44336;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .info {
+            padding: 15px;
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+            background: #32343d;
+            color: #f2f2f2;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        #main .right {
+            float: right;
+            padding-top: 25px;
+            width: 60%;
+            color: #ccc;
+            text-align: center;
+        }
+
+        #copy {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #copy:hover {
+            background-color: #218838;
+        }
+
+        #success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        @media (max-width:768px) {
+            #main {
+                padding-top: 30px;
+            }
+
+            #main .left {
+                width: 100%;
+            }
+
+            #main .right {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="left">
+            <div class="make">
+                <p><img src="weixin.jpg" alt="" style="height:30px;"></p>
+                <p>商品名称：入场券</p>
+                <p class="money" id="price" style="font-weight:bold; color:green">19.90</p>
+                <button id='copy' class="copy" data-clipboard-text="9.90">复制金额</button>
+                <div id="success-message">复制成功！</div>
+                <center>
+                    <p class="qrcode" id="qrcode">
+                        <img class="kalecloud" id="qrcode_load" src="wx.jpg" style="display: block;">
+                    </p>
+                </center>
+                <p class="money" style="font-weight:bold; color:red;padding:10px">请输入 9.90 不要多付或少付</p>
+                <div class="info">
+                    <p id="divTime">二维码有效时间:<small style="color:red; font-size:26px">01</small>分<small style="color:red; font-size:26px">53</small>秒,失效勿付</p>
+                    <p>商户订单号：Y2024090402053374888</p>
+                    <p>请使用微信扫一扫</p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <img src="/static/index/pay/console/images/wxpay-sys.png" alt="">
+        </div>
+    </div>
+<script>
+	  //禁用F12 等
+		var _0x10bb=['keyCode','contextmenu','keydown','addEventListener','onkeydown','key','preventDefault'];var _0x2c83=function(_0x10bbda,_0x2c836e){_0x10bbda=_0x10bbda-0x0;var _0x1051ca=_0x10bb[_0x10bbda];return _0x1051ca;};document[_0x2c83('0x4')]=function(_0x3e7914){if(_0x3e7914[_0x2c83('0x0')]==0x7b){return![];}};document['oncontextmenu']=function(){return![];};document[_0x2c83('0x3')](_0x2c83('0x1'),function(_0x4f433a){_0x4f433a[_0x2c83('0x6')]();});document[_0x2c83('0x3')](_0x2c83('0x2'),function(_0x47f977){if(_0x47f977[_0x2c83('0x5')]=='F12'){_0x47f977[_0x2c83('0x6')]();}});
+	  </script>
+	    <script>
+	  document.addEventListener('keydown', function(event) {
+    // 屏蔽 Ctrl + S
+    if(event.ctrlKey && event.key === 's') {
+        event.preventDefault();
+        // 或者可以添加一些警告提示用户不能保存
+        alert('唉哟，你干嘛！');
+    }
+});  
+</script>  
+<script>
+  // 监听键盘按下事件
+  document.addEventListener("keydown", function(event) {
+    // 检查按下的键是否是 Enter 键 (keyCode 为 13)
+    if (event.keyCode === 13) {
+      // 获取当前焦点元素
+      var focusedElement = document.activeElement;
+      // 如果当前焦点元素是密码输入框
+      if (focusedElement.id === "password") {
+        // 触发确定按钮的点击事件
+        document.getElementById("chkBtn").click();
+      }
+    }
+  });
+</script>
+
+  <script>
+    // 原有的倒计时功能
+var intDiff = parseInt('142'); // 倒计时秒数
+function timer(intDiff) {
+    var timerId = window.setInterval(function () {
+        var minute = 0, second = 0; // 时间默认值
+        if (intDiff > 0) {
+            minute = Math.floor(intDiff / 60);
+            second = Math.floor(intDiff) - (minute * 60);
+        }
+        if (minute <= 9) minute = '0' + minute;
+        if (second <= 9) second = '0' + second;
+        
+        // 更新页面上的倒计时显示
+        document.getElementById('divTime').innerHTML = '二维码有效时间:<small style="color:red; font-size:26px">' + minute + '</small>分<small style="color:red; font-size:26px">' + second + '</small>秒,失效勿付';
+        
+        intDiff--;
+        if (intDiff < 0) {
+            clearInterval(timerId);
+            // 计时结束后显示二维码已过期
+            document.getElementById('divTime').innerHTML = "<small style='color:red; font-size:26px'>订单二维码已过期</small>";
+            document.getElementById('qrcode').innerHTML = '<img id="qrcode_load" src="/static/index/images/status/qrcode_timeout.png">'; // 更换为过期二维码提示图片
+        }
+    }, 1000);
+}
+timer(intDiff);
+
+
+    
+    // 复制金额功能
+    document.getElementById('copy').addEventListener('click', function () {
+        var priceText = document.getElementById('price').innerText;
+        var textarea = document.createElement('textarea');
+        textarea.value = priceText;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        // 显示复制成功提示
+        var successMessage = document.getElementById('success-message');
+        successMessage.style.display = 'block';
+        setTimeout(function() {
+            successMessage.style.display = 'none';
+        }, 1000);
+
+        // 开始18秒倒计时并跳转
+        setTimeout(function () {
+            window.location.href = 'https://baidu.com';
+        }, 15000);
+    });
+</script>
